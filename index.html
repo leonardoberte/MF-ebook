@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mente Forte — Guia Prático de Saúde Mental</title>
+  <meta name="description" content="Mente Forte: Guia prático para fortalecer sua saúde mental em apenas 15 minutos por dia. E-book + bônus." />
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg: #f6f8fb;
+      --card: #ffffff;
+      --accent: #5b8ef6;
+      --accent-2: #6ad3c5;
+      --danger: #ef4444;
+      --muted:#6b7280;
+      --radius: 14px;
+      font-family: "Montserrat", sans-serif;
+    }
+    *{box-sizing:border-box;scroll-behavior:smooth;}
+    body{
+      margin:0;background: linear-gradient(135deg, #eef3ff, #ffffff);
+      color:#111827;line-height:1.5;overflow-x:hidden;
+    }
+    .container{max-width:1100px;margin:0 auto;padding:28px;}
+    header{display:flex;align-items:center;justify-content:space-between;padding:12px 0;}
+    .brand{display:flex;gap:12px;align-items:center}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:18px;animation: pulse 3s infinite;}
+    @keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.08)}100%{transform:scale(1)}}
+    nav a{margin-left:18px;color:var(--muted);text-decoration:none;font-weight:600;position:relative;}
+    nav a::after{content:"";position:absolute;width:0;height:2px;bottom:-2px;left:0;background:var(--accent);transition:.3s;}
+    nav a:hover::after{width:100%;}
+    nav a.cta{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;padding:10px 16px;border-radius:10px;box-shadow:0 6px 20px rgba(0,0,0,.1);}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:28px;align-items:center;margin-top:18px;animation: fadeInUp 1.2s ease;}
+    @keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .hero-left h2{font-size:36px;margin:0 0 12px;background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .hero-left p{color:var(--muted);margin-bottom:18px;font-size:18px;}
+    .badges{display:flex;gap:10px;margin-bottom:18px;flex-wrap:wrap}
+    .badge{background:#fff;padding:10px 14px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.06);font-weight:600;font-size:13px;transition:.3s;}
+    .badge:hover{transform:scale(1.08);}
+    .cta-group{display:flex;gap:12px;align-items:center}
+    .btn{background:linear-gradient(135deg,var(--accent),var(--accent-2));color:white;padding:14px 22px;border-radius:12px;border:0;font-weight:700;cursor:pointer;box-shadow:0 10px 30px rgba(91,142,246,0.25);transition:.3s;position:relative;overflow:hidden;}
+    .btn::before{content:"";position:absolute;top:0;left:-100%;width:100%;height:100%;background:rgba(255,255,255,.3);transition:0.3s;}
+    .btn:hover::before{left:100%;}
+    .btn:hover{transform:scale(1.05);}
+    .btn.secondary{background:transparent;color:var(--accent);border:2px solid var(--accent);box-shadow:none;}
+    .note{font-size:13px;color:var(--muted);margin-top:8px}
+    .card{background:var(--card);border-radius:18px;padding:18px;box-shadow:0 14px 40px rgba(15,23,42,0.08);transition:.3s;}
+    .card:hover{transform:translateY(-6px);}
+    .cover{width:100%;height:0;padding-bottom:140%;position:relative;border-radius:10px;overflow:hidden}
+    .cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+    .price{margin-top:12px;display:flex;justify-content:space-between;align-items:center}
+    .price strong{font-size:28px;color:var(--accent);animation: pulse 2.5s infinite;}
+    .old-price{text-decoration:line-through;color:var(--danger);font-size:15px;}
+    .small{color:var(--muted);font-size:13px}
+    section{margin-top:56px}
+    h2{font-size:26px;margin-bottom:18px;text-align:center}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .feature{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 8px 20px rgba(15,23,42,0.05);transition:.3s;}
+    .feature:hover{transform:translateY(-5px);}
+    .feature h3{margin:0 0 8px;font-size:18px;color:var(--accent);}
+    .what-list{display:flex;flex-direction:column;gap:14px}
+    .what-item{display:flex;gap:14px;align-items:flex-start;background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(15,23,42,0.05);transition:.3s;}
+    .what-item:hover{transform:scale(1.02);}
+    .dot{width:44px;height:44px;border-radius:10px;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;color:white;font-weight:700}
+    .urgency{margin-top:20px;background:#fff0f0;padding:14px;border-radius:10px;text-align:center;font-weight:700;color:var(--danger);box-shadow:0 6px 18px rgba(15,23,42,0.06);animation: blink 1.5s infinite;}
+    @keyframes blink{0%,100%{opacity:1}50%{opacity:0.6}}
+    .testimonials{overflow:hidden;position:relative;}
+    .testimonial-track{display:flex;gap:14px;animation: slide 15s infinite linear;}
+    .t-card{min-width:300px;background:linear-gradient(180deg,#fff,#f9fbff);padding:16px;border-radius:10px;box-shadow:0 10px 30px rgba(15,23,42,0.04);flex:0 0 auto;}
+    .t-card strong{color:var(--accent)}
+    @keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+    .guarantee{display:flex;gap:18px;align-items:center;background:#f0fff8;padding:20px;border-radius:12px;box-shadow:0 8px 20px rgba(15,23,42,0.05);border-left:6px solid var(--accent-2);animation: fadeInUp 1.5s;}
+    footer{margin-top:40px;padding:30px 0;color:var(--muted);font-size:14px;text-align:center}
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr}
+      .grid-3{grid-template-columns:1fr}
+      .testimonial-track{animation:none;flex-direction:column;}
+      .t-card{min-width:unset}
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">MF</div>
+        <div>
+          <h1>Mente Forte</h1>
+          <div style="font-size:13px;color:var(--muted)">Guia de Saúde Mental</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#o-que-voce-ganha">O que recebe</a>
+        <a href="#depoimentos">Depoimentos</a>
+        <a class="cta" href="#comprar" id="scroll-buy-top">Comprar</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <main class="hero">
+      <div class="hero-left">
+        <div class="badges">
+          <div class="badge">15min/dia</div>
+          <div class="badge">Prático & Aplicável</div>
+          <div class="badge">Para pais e adolescentes</div>
+        </div>
+        <h2>Transforme sua mente em apenas 15 minutos por dia</h2>
+        <p>“Mente Forte” é um guia prático para fortalecer sua saúde mental, reduzir ansiedade e criar hábitos emocionais sustentáveis.</p>
+        <div class="cta-group">
+          <button class="btn" id="buy-now">Comprar agora</button>
+          <button class="btn secondary" id="preview-btn">Ver sumário</button>
+        </div>
+        <div class="note">Pagamento 100% seguro. Acesso imediato após confirmação.</div>
+        <div class="urgency">⚡ Oferta válida até hoje às 23h59 ou até 50 cópias vendidas!</div>
+      </div>
+
+      <aside class="card">
+        <div class="cover">
+          <img src="img/2.png" alt="Capa do e-book Mente Forte">
+        </div>
+        <div class="price">
+          <div>
+            <div style="font-size:13px;color:var(--muted)">E-book + 3 Bônus Exclusivos</div>
+            <div class="old-price">De R$97</div>
+            <strong>R$ 19,00</strong>
+            <div class="small">Preço promocional de lançamento!</div>
+          </div>
+          <div>
+            <button class="btn" id="buy-now-2">Comprar</button>
+          </div>
+        </div>
+      </aside>
+    </main>
+
+    <!-- Benefícios -->
+    <section>
+      <h2>Por que este guia funciona?</h2>
+      <div class="grid-3">
+        <div class="feature"><h3>Prático e direto</h3><p>Aplicação rápida no dia a dia. Técnicas simples que cabem em 15 minutos.</p></div>
+        <div class="feature"><h3>Base científica</h3><p>Métodos de respiração, journaling e hábitos sustentados pela psicologia.</p></div>
+        <div class="feature"><h3>Para toda a família</h3><p>Ferramentas pensadas para pais, mães e adolescentes — linguagem acessível.</p></div>
+      </div>
+    </section>
+
+    <!-- O que recebe -->
+    <section id="o-que-voce-ganha">
+      <h2>O que você vai receber</h2>
+      <div class="what-list">
+        <div class="what-item"><div class="dot">1</div><div><strong>E-book "Mente Forte"</strong><div class="small">Guia completo com práticas, reflexões e rotinas.</div></div></div>
+        <div class="what-item"><div class="dot">B</div><div><strong>Checklist Diário</strong><div class="small">PDF prático para seguir hábitos todos os dias. (R$27)</div></div></div>
+        <div class="what-item"><div class="dot">P</div><div><strong>Planner Semanal</strong><div class="small">Arquivo editável no Canva para organizar sua semana. (R$47)</div></div></div>
+        <div class="what-item"><div class="dot">M</div><div><strong>Meditação Guiada (10 min)</strong><div class="small">Áudio exclusivo para baixar e usar diariamente. (R$37)</div></div></div>
+      </div>
+      <p style="margin-top:16px;font-weight:700;text-align:center">💡 Valor total: R$208 → Hoje por apenas <span style="color:var(--accent);font-size:22px">R$19</span></p>
+    </section>
+
+    <!-- Depoimentos -->
+    <section id="depoimentos">
+      <h2>Depoimentos</h2>
+      <div class="testimonials">
+        <div class="testimonial-track">
+          <div class="t-card"><strong>Mariana S.</strong><p>"Em 1 semana já senti menos ansiedade. Texto claro e exercícios fáceis."</p></div>
+          <div class="t-card"><strong>Ricardo P.</strong><p>"A meditação guiada foi essencial — comecei a dormir melhor."</p></div>
+          <div class="t-card"><strong>Ana L.</strong><p>"Perfeito para quem tem pouco tempo, mas quer resultados reais."</p></div>
+          <div class="t-card"><strong>Lucas M.</strong><p>"Me ajudou a ter mais foco e clareza no trabalho."</p></div>
+          <div class="t-card"><strong>Fernanda T.</strong><p>"Valeu cada centavo, sensação de calma no dia a dia."</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Garantia -->
+    <section>
+      <div class="guarantee">
+        <div style="font-weight:700;font-size:18px;">✅ Garantia de 7 dias</div>
+        <div class="small">Se o material não te ajudar, devolvemos 100% do seu investimento.</div>
+      </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section id="comprar" style="margin-top:30px;display:flex;align-items:center;justify-content:space-between;gap:18px">
+      <div>
+        <h3>Pronto para transformar sua rotina emocional?</h3>
+        <p class="small">Comece hoje com práticas simples — receba tudo instantaneamente após a compra.</p>
+        <p style="font-weight:700;color:var(--danger)">🔥 Últimas vagas com desconto!</p>
+      </div>
+      <div><button class="btn" id="final-buy">Comprar por R$ 19,00</button></div>
+    </section>
+
+    <footer>
+      <div>© <strong>Mente Forte</strong> • Todos os direitos reservados</div>
+      <div style="margin-top:8px">Contato: InovaX-DEV@gmail.com</div>
+    </footer>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="modal">
+    <div class="modal-content">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <strong>Sumário do E-book</strong>
+        <button class="close" id="close-modal">Fechar</button>
+      </div>
+      <ol style="margin:0 0 8px 20px;color:var(--muted)">
+        <li>Introdução: Por que cuidar da mente</li>
+        <li>Autoconhecimento e emoções</li>
+        <li>Hábitos que fortalecem a saúde mental</li>
+        <li>Técnicas práticas: respiração, journaling e gratidão</li>
+        <li>Rotina saudável: exemplo prático</li>
+        <li>Relacionamentos e limites</li>
+        <li>Quando buscar ajuda profissional</li>
+        <li>Recursos e ferramentas</li>
+      </ol>
+      <div style="display:flex;gap:10px;justify-content:flex-end">
+        <button class="btn" id="modal-buy">Comprar agora</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const KIWI_LINK = "https://pay.kiwify.com.br/I7dlIug";
+    const buyBtns = document.querySelectorAll('#buy-now, #buy-now-2, #final-buy, #modal-buy, #scroll-buy-top');
+    buyBtns.forEach(b=> b.addEventListener('click', ()=> window.location.href = KIWI_LINK));
+    const modal = document.getElementById('modal');
+    const previewBtn = document.getElementById('preview-btn');
+    const closeModal = document.getElementById('close-modal');
+    previewBtn.addEventListener('click', ()=> modal.classList.add('open'));
+    closeModal.addEventListener('click', ()=> modal.classList.remove('open'));
+    modal.addEventListener('click', (e)=>{ if(e.target === modal) modal.classList.remove('open'); });
+    window.addEventListener('keydown', e=>{ if(e.key === "Escape") modal.classList.remove('open'); });
+  </script>
+</body>
+</html>
