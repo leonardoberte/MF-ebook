@@ -7,32 +7,26 @@
   <title>Mente Forte — Guia Prático de Saúde Mental</title>
   <meta name="description"
     content="Mente Forte: Guia prático para fortalecer sua saúde mental em apenas 15 minutos por dia. E-book + bônus." />
- <!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '650030304845636');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=650030304845636&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1513620006320203&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
+  <!-- Meta Pixel Code -->
+  <script>
+    !function (f, b, e, v, n, t, s) {
+      if (f.fbq) return; n = f.fbq = function () {
+        n.callMethod ?
+        n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+      };
+      if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+      n.queue = []; t = b.createElement(e); t.async = !0;
+      t.src = v; s = b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t, s)
+    }(window, document, 'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '650030304845636');
+    fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=1513620006320203&ev=PageView&noscript=1" /></noscript>
+      src="https://www.facebook.com/tr?id=650030304845636&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
+
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
 
@@ -445,13 +439,15 @@ src="https://www.facebook.com/tr?id=1513620006320203&ev=PageView&noscript=1"
       text-align: center
     }
 
-    @media (max-width:980px) {
+    /* ====== RESPONSIVIDADE ====== */
+    @media (max-width: 980px) {
       .hero {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
+        text-align: center;
       }
 
       .grid-3 {
-        grid-template-columns: 1fr
+        grid-template-columns: 1fr;
       }
 
       .testimonial-track {
@@ -460,7 +456,73 @@ src="https://www.facebook.com/tr?id=1513620006320203&ev=PageView&noscript=1"
       }
 
       .t-card {
-        min-width: unset
+        min-width: unset;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .hero-left h2 {
+        font-size: 26px;
+      }
+
+      .hero-left p {
+        font-size: 16px;
+      }
+
+      .cta-group {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .btn,
+      .btn.secondary {
+        width: 100%;
+        max-width: 320px;
+        margin: 0 auto;
+      }
+
+      .card {
+        max-width: 380px;
+        margin: 20px auto 0;
+      }
+
+      .price {
+        flex-direction: column;
+        gap: 12px;
+        align-items: flex-start;
+      }
+
+      #comprar {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      #comprar .btn {
+        width: 100%;
+        max-width: 320px;
+      }
+
+      footer {
+        font-size: 12px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-left h2 {
+        font-size: 22px;
+      }
+
+      .hero-left p {
+        font-size: 14px;
+      }
+
+      .badge {
+        font-size: 12px;
+        padding: 8px 10px;
+      }
+
+      strong {
+        font-size: 22px !important;
       }
     }
   </style>
@@ -476,14 +538,9 @@ src="https://www.facebook.com/tr?id=1513620006320203&ev=PageView&noscript=1"
           <div style="font-size:13px;color:var(--muted)">Guia de Saúde Mental</div>
         </div>
       </div>
-      <nav>
-        <a href="#o-que-voce-ganha">O que recebe</a>
-        <a href="#depoimentos">Depoimentos</a>
-        <a class="cta" href="#comprar" id="scroll-buy-top">Comprar</a>
-      </nav>
-    </header>
-
-    <!-- HERO -->
+      <nav> <a href="#o-que-voce-ganha">O que recebe</a> <a href="#depoimentos">Depoimentos</a> <a class="cta"
+          href="#comprar" id="scroll-buy-top">Comprar</a> </nav>
+    </header> <!-- HERO -->
     <main class="hero">
       <div class="hero-left">
         <div class="badges">
@@ -494,33 +551,23 @@ src="https://www.facebook.com/tr?id=1513620006320203&ev=PageView&noscript=1"
         <h2>Transforme sua mente em apenas 15 minutos por dia</h2>
         <p>“Mente Forte” é um guia prático para fortalecer sua saúde mental, reduzir ansiedade e criar hábitos
           emocionais sustentáveis.</p>
-        <div class="cta-group">
-          <button class="btn" id="buy-now">Comprar agora</button>
-          <button class="btn secondary" id="preview-btn">Ver sumário</button>
-        </div>
+        <div class="cta-group"> <button class="btn" id="buy-now">Comprar agora</button> <button class="btn secondary"
+            id="preview-btn">Ver sumário</button> </div>
         <div class="note">Pagamento 100% seguro. Acesso imediato após confirmação.</div>
         <div class="urgency">⚡ Oferta válida até hoje às 23h59 ou até 50 cópias vendidas!</div>
       </div>
-
       <aside class="card">
-        <div class="cover">
-          <img src="img/2.png" alt="Capa do e-book Mente Forte">
-        </div>
+        <div class="cover"> <img src="img/2.png" alt="Capa do e-book Mente Forte"> </div>
         <div class="price">
           <div>
             <div style="font-size:13px;color:var(--muted)">E-book + 3 Bônus Exclusivos</div>
-            <div class="old-price">De R$49,99</div>
-            <strong>R$ 19,00</strong>
+            <div class="old-price">De R$49,99</div> <strong>R$ 19,00</strong>
             <div class="small">Preço promocional de lançamento!</div>
           </div>
-          <div>
-            <button class="btn" id="buy-now-2">Comprar</button>
-          </div>
+          <div> <button class="btn" id="buy-now-2">Comprar</button> </div>
         </div>
       </aside>
-    </main>
-
-    <!-- Benefícios -->
+    </main> <!-- Benefícios -->
     <section>
       <h2>Por que este guia funciona?</h2>
       <div class="grid-3">
@@ -537,9 +584,7 @@ src="https://www.facebook.com/tr?id=1513620006320203&ev=PageView&noscript=1"
           <p>Ferramentas pensadas para pais, mães e adolescentes — linguagem acessível.</p>
         </div>
       </div>
-    </section>
-
-    <!-- O que recebe -->
+    </section> <!-- O que recebe -->
     <section id="o-que-voce-ganha">
       <h2>O que você vai receber</h2>
       <div class="what-list">
@@ -570,9 +615,7 @@ src="https://www.facebook.com/tr?id=1513620006320203&ev=PageView&noscript=1"
       </div>
       <p style="margin-top:16px;font-weight:700;text-align:center">💡 Valor total: R$49,99 → Hoje por apenas <span
           style="color:var(--accent);font-size:22px">R$19</span></p>
-    </section>
-
-    <!-- Depoimentos -->
+    </section> <!-- Depoimentos -->
     <section id="depoimentos">
       <h2>Depoimentos</h2>
       <div class="testimonials">
@@ -594,17 +637,13 @@ src="https://www.facebook.com/tr?id=1513620006320203&ev=PageView&noscript=1"
           </div>
         </div>
       </div>
-    </section>
-
-    <!-- Garantia -->
+    </section> <!-- Garantia -->
     <section>
       <div class="guarantee">
         <div style="font-weight:700;font-size:18px;">✅ Garantia de 7 dias</div>
         <div class="small">Se o material não te ajudar, devolvemos 100% do seu investimento.</div>
       </div>
-    </section>
-
-    <!-- CTA Final -->
+    </section> <!-- CTA Final -->
     <section id="comprar"
       style="margin-top:30px;display:flex;align-items:center;justify-content:space-between;gap:18px">
       <div>
@@ -614,25 +653,17 @@ src="https://www.facebook.com/tr?id=1513620006320203&ev=PageView&noscript=1"
       </div>
       <div><button class="btn" id="final-buy">Comprar por R$ 19,00</button></div>
     </section>
-
     <footer>
       <div>© <strong>Mente Forte</strong> • Todos os direitos reservados</div>
       <div style="margin-top:8px">Contato: InovaX-DEV@gmail.com</div>
     </footer>
   </div>
+  <script> const KIWI_LINK = "https://pay.kiwify.com.br/I7dlIug"; const buyBtns = document.querySelectorAll('#buy-now, #buy-now-2, #final-buy, #modal-buy, #scroll-buy-top'); buyBtns.forEach(b => b.addEventListener('click', () => window.location.href = KIWI_LINK)); const modal = document.getElementById('modal'); const previewBtn = document.getElementById('preview-btn'); const closeModal = document.getElementById('close-modal'); previewBtn.addEventListener('click', () => modal.classList.add('open')); closeModal.addEventListener('click', () => modal.classList.remove('open')); modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); }); window.addEventListener('keydown', e => { if (e.key === "Escape") modal.classList.remove('open'); }); </script>
+</body>
 
-  <script>
-    const KIWI_LINK = "https://pay.kiwify.com.br/I7dlIug";
-    const buyBtns = document.querySelectorAll('#buy-now, #buy-now-2, #final-buy, #modal-buy, #scroll-buy-top');
-    buyBtns.forEach(b => b.addEventListener('click', () => window.location.href = KIWI_LINK));
-    const modal = document.getElementById('modal');
-    const previewBtn = document.getElementById('preview-btn');
-    const closeModal = document.getElementById('close-modal');
-    previewBtn.addEventListener('click', () => modal.classList.add('open'));
-    closeModal.addEventListener('click', () => modal.classList.remove('open'));
-    modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('open'); });
-    window.addEventListener('keydown', e => { if (e.key === "Escape") modal.classList.remove('open'); });
-  </script>
+</html>
+...
+</div>
 </body>
 
 </html>
